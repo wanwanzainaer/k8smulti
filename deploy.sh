@@ -8,6 +8,7 @@ docker push wanwanzainaer/multi-worker:latest
 docker push wanwanzainaer/multi-client:$SHA
 docker push wanwanzainaer/multi-server:$SHA
 docker push wanwanzainaer/multi-worker:$SHA
+
 kubectl apply -f k8s
 
 kubectl set image deployments/server-deployment server=wanwanzainaer/multi-server:$SHA
