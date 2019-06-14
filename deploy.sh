@@ -1,6 +1,6 @@
 docker build -t wanwanzainaer/multi-client:latest -t wanwanzainaer/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t wanwanzainaer/multi-server:latest -t wanwanzainaer/multi-client:$SHA -f ./server/Dockerfile ./server
-docker build -t wanwanzainaer/multi-worker:latest -t wanwanzainaer/multi-client:$SHA -f ./worker/Dockerfile ./worker
+docker build -t wanwanzainaer/multi-server:latest -t wanwanzainaer/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t wanwanzainaer/multi-worker:latest -t wanwanzainaer/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push wanwanzainaer/multi-client:latest
 docker push wanwanzainaer/multi-server:latest
 docker push wanwanzainaer/multi-worker:latest
